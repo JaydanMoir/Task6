@@ -18,42 +18,42 @@ class Animal:
     def voice(self):
         return self.sound
 
-class Egg:
+class Egg(Animal):
     def lay_eggs(self):
         self.state = "Получены яйца"
         return self.state
 
-class Wool:
+class Wool(Animal):
     def trim(self):
         self.state = "Подстрижен"
         return self.state
 
-class Milk:
+class Milk(Animal):
     def get_milk(self):
         self.state = "Получено молоко"
         return self.state
 
-class Goose(Animal, Egg):
+class Goose(Egg):
     name = "Гусь"
     sound = "Га-Га"
 
-class Cow(Animal, Milk):
+class Cow(Milk):
     name = "Корова"
     sound = "Му-му"
 
-class Sheep(Animal, Wool):
+class Sheep(Wool):
     name = "Овца"
     sound = "Бе-Бе"
 
-class Hen(Animal, Egg):
+class Hen(Egg):
     name = "Курица"
     sound = "Ку-ка-ре-ку"
 
-class Goat(Animal, Milk):
+class Goat(Milk):
     name = "Коза"
     sound = "Ме-Ме"
 
-class Duck(Animal, Egg):
+class Duck(Egg):
     name = "Утка"
     sound = "Кря-Кря"
 
@@ -62,94 +62,94 @@ class Duck(Animal, Egg):
 print(Animal.place)
 animals_dict = {}
 
-Goose1 = Goose("Серый", 5)
-animals_dict[Goose1.name] = Goose1.weight
-print(Goose1.name)
-print(Goose1.voice())
-print(Goose1.walk())
-print(Goose1.eat())
-print(Goose1.lay_eggs())
+goose1 = Goose("Серый", 5)
+animals_dict[goose1.name] = goose1.weight
+print(goose1.name)
+print(goose1.voice())
+print(goose1.walk())
+print(goose1.eat())
+print(goose1.lay_eggs())
 print()
 
-Goose2 = Goose("Белый", 7)
-animals_dict[Goose2.name] = Goose2.weight
-print(Goose2.name)
-print(Goose2.voice())
-print(Goose2.walk())
-print(Goose2.eat())
-print(Goose2.lay_eggs())
+goose2 = Goose("Белый", 7)
+animals_dict[goose2.name] = goose2.weight
+print(goose2.name)
+print(goose2.voice())
+print(goose2.walk())
+print(goose2.eat())
+print(goose2.lay_eggs())
 print()
 
-Cow1 = Cow("Манька", 400)
-animals_dict[Cow1.name] = Cow1.weight
-print(Cow1.name)
-print(Cow1.voice())
-print(Cow1.walk())
-print(Cow1.eat())
-print(Cow1.get_milk())
+cow1 = Cow("Манька", 400)
+animals_dict[cow1.name] = cow1.weight
+print(cow1.name)
+print(cow1.voice())
+print(cow1.walk())
+print(cow1.eat())
+print(cow1.get_milk())
 print()
 
-Sheep1 = Sheep("Барашек", 65)
-animals_dict[Sheep1.name] = Sheep1.weight
-print(Sheep1.name)
-print(Sheep1.voice())
-print(Sheep1.walk())
-print(Sheep1.eat())
-print(Sheep1.trim())
+sheep1 = Sheep("Барашек", 65)
+animals_dict[sheep1.name] = sheep1.weight
+print(sheep1.name)
+print(sheep1.voice())
+print(sheep1.walk())
+print(sheep1.eat())
+print(sheep1.trim())
 print()
 
-Sheep2 = Sheep("Кудрявый", 78)
-animals_dict[Sheep2.name] = Sheep2.weight
-print(Sheep2.name)
-print(Sheep2.voice())
-print(Sheep2.walk())
-print(Sheep2.eat())
-print(Sheep2.trim())
+sheep2 = Sheep("Кудрявый", 78)
+animals_dict[sheep2.name] = sheep2.weight
+print(sheep2.name)
+print(sheep2.voice())
+print(sheep2.walk())
+print(sheep2.eat())
+print(sheep2.trim())
 print()
 
-Hen1 = Hen("Ко-Ко", 1.5)
-animals_dict[Hen1.name] = Hen1.weight
-print(Hen1.name)
-print(Hen1.voice())
-print(Hen1.walk())
-print(Hen1.eat())
-print(Hen1.lay_eggs())
+hen1 = Hen("Ко-Ко", 1.5)
+animals_dict[hen1.name] = hen1.weight
+print(hen1.name)
+print(hen1.voice())
+print(hen1.walk())
+print(hen1.eat())
+print(hen1.lay_eggs())
 print()
 
-Hen2 = Hen("Кукареку", 2)
-animals_dict[Hen2.name] = Hen2.weight
-print(Hen2.name)
-print(Hen2.voice())
-print(Hen2.walk())
-print(Hen2.eat())
-print(Hen2.lay_eggs())
+hen2 = Hen("Кукареку", 2)
+animals_dict[hen2.name] = hen2.weight
+print(hen2.name)
+print(hen2.voice())
+print(hen2.walk())
+print(hen2.eat())
+print(hen2.lay_eggs())
 print()
 
-Goat1 = Goat("Рога", 50)
-animals_dict[Goat1.name] = Goat1.weight
-print(Goat1.name)
-print(Goat1.voice())
-print(Goat1.walk())
-print(Goat1.eat())
-print(Goat1.get_milk())
+goat1 = Goat("Рога", 50)
+animals_dict[goat1.name] = goat1.weight
+print(goat1.name)
+print(goat1.voice())
+print(goat1.walk())
+print(goat1.eat())
+print(goat1.get_milk())
 print()
 
-Goat2 = Goat("Копыта", 60)
-animals_dict[Goat2.name] = Goat2.weight
-print(Goat2.name)
-print(Goat2.voice())
-print(Goat2.walk())
-print(Goat2.eat())
-print(Goat2.get_milk())
+goat2 = Goat("Копыта", 60)
+animals_dict[goat2.name] = goat2.weight
+print(goat2.name)
+print(goat2.voice())
+print(goat2.walk())
+print(goat2.eat())
+print(goat2.get_milk())
 print()
 
-Duck1 = Duck("Кряква", 3)
-animals_dict[Duck1.name] = Duck1.weight
-print(Duck1.name)
-print(Duck1.voice())
-print(Duck1.walk())
-print(Duck1.eat())
-print(Duck1.lay_eggs())
+duck1 = Duck("Кряква", 3)
+animals_dict[duck1.name] = duck1.weight
+print(duck1.name)
+print(duck1.voice())
+print(duck1.walk())
+print(duck1.eat())
+print(duck1.lay_eggs())
 print()
 
 print(f"Общий вес всех животных: {sum(animals_dict.values())}кг\n")
